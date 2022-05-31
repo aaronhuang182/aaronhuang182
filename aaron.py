@@ -47,7 +47,7 @@ while True:
                     if text[1] not in stockListBull:
                         stockListBull.add(text[1])
                         lineMessage = \
-                            '\n宥\n機器人當沖單 做多\n{0} {1}'.format(text[1],text[2].replace('\n',''))
+                            '\n機器人當沖單 做多\n{0} {1}'.format(text[1],text[2].replace('\n',''))
 
                         for token in tokenDict.values():
                             lineNotifyMessage(token, lineMessage)
@@ -56,7 +56,7 @@ while True:
                     if text[1] not in stockListBear:
                         stockListBear.add(text[1])
                         lineMessage = \
-                            '\n宥\n機器人當沖單 做空\n{0} {1}\n倍數:{2}'.format(text[1],text[2].replace('\n',''))
+                            '\n機器人當沖單 做空\n{0} {1}\n倍數:{2}'.format(text[1],text[2].replace('\n',''))
                 
                 for token in tokenDict.values():
                     lineNotifyMessage(token, lineMessage)    
