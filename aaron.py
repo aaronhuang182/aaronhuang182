@@ -6,7 +6,7 @@ from datetime import datetime
 
 filename=r'C:\SysJust\signal\aaronclearfile.txt'
 
-tokenDict={'I3egjAOmZ5MnrInhQcrYrjoY0XntYOiLqss5fFZY4kc'}
+tokenDict={'uSgVfbftT4DaA2BSp4cHecHXIhYDSmRwH0uHbeVphny'}
 
 stockListBull={''}
 stockListBear={''}
