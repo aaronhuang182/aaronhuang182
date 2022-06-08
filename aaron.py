@@ -4,9 +4,9 @@ import time
 import winsound
 from datetime import datetime
 
-filename=r'C:\SysJust\signal\aaronclearfile.txt'
+filename=r'D:signal\aaronclearfile.txt'
 
-tokenDict={'uSgVfbftT4DaA2BSp4cHecHXIhYDSmRwH0uHbeVphny'}
+tokenDict={'iL0m0ydmAYHrmtemXvlvBl4AhMcxLrAfd0sth2fOmxG'}
 
 stockListBull={''}
 stockListBear={''}
