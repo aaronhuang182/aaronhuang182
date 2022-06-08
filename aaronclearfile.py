@@ -1,10 +1,10 @@
 import time
 from datetime import datetime
 
-pathDict={'token_test':r'C:\SysJust\signal\aaronclearfile.txt'}
+pathDict={'token_test':r'D:\signal\aaronclearfile.txt'}
 
-startTime=133500
-endTime=133510
+startTime=132500
+endTime=132510
 
 while True:
     
