@@ -67,7 +67,7 @@ def notifyData(showIndex): #設定notifyData函式並帶入
         #message += messageBasket[9] + " " + messageBasket[10] + " "
         
         #呼叫lineNotifyMessage函式並帶入使用權限,訊息
-        lineNotifyMessage("23orwNZ7D8Bck61K3ZRpRxxBIHCg63j6tLizXhUyrlF", message)
+        lineNotifyMessage("SdgWSvDJDIzInlwR3NJIisfos1cI5lbL5do5cEbmasw", message)
 
 
 def ReadFile(initLines): #設定ReadFile函式
