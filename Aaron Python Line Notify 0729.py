@@ -5,17 +5,14 @@ import datetime
 import requests
 # probably should not import both time and datetime
 
-
 MyFile = r'C:\signal\aaronclearfile.txt'
 MyText = " "
 MyDate = " "
 initialLines = 0
 
-
 def GetDateTime(): #設定GetDateTime函式
     MyDate = time.strftime("%x %I:%M %p") #定義時間格式
     return MyDate+" "
-
 
 def lineNotifyMessage(token, msg): #設定lineNotifyMessage函式
     
@@ -25,11 +22,9 @@ def lineNotifyMessage(token, msg): #設定lineNotifyMessage函式
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
-
     payload = {'message': msg}
     r = requests.post("https://notify-api.line.me/api/notify", headers= headers, params= payload)
     return r.status_code
-
 
 def notifyData(showIndex): #設定notifyData函式並帶入
     #以下設定抓取所有訊息
@@ -42,12 +37,9 @@ def notifyData(showIndex): #設定notifyData函式並帶入
         print("show index : " + str(showIndex)) #顯示行數
         print("Show Data : " + str(Lines[(showIndex -1)])) #顯示新增文字
 
-
         messageBasket = str(Lines[(showIndex -1)]).split(" ") #把字串指定給messageBasket
 
-
-        messagebasketlen = len(messageBasket) #把計算好的長度指定給messagebasketlen
-        
+        messagebasketlen = len(messageBasket) #把計算好的長度指定給messagebasketlen        
   
         #以下把訊息messageBasket 累加排列給message 
         
@@ -60,17 +52,9 @@ def notifyData(showIndex): #設定notifyData函式並帶入
         message += messageBasket[10] + "\r\n" + messageBasket[11] + " "
         message += messageBasket[12] + " " + messageBasket[13] + " " 
         message += messageBasket[14] + " " + messageBasket[15] + " " 
-       
-        #message = messageBasket[0] + " "
-        #message += messageBasket[1] + "\r" + messageBasket[2] + "  " 
-        #message += messageBasket[3] + "\r\n" + messageBasket[4] + " " 
-        #message += messageBasket[5] + " " + messageBasket[6] + "\r\n" 
-        #message += messageBasket[7] + " " + messageBasket[8] + "\r\n" 
-        #message += messageBasket[9] + " " + messageBasket[10] + " "
-        
-        #呼叫lineNotifyMessage函式並帶入使用權限,訊息
-        lineNotifyMessage("N4Ru9t4LHyV72qe105aDD9D7qu8nI74y4kuwcZnMfWi", message)
 
+        #呼叫lineNotifyMessage函式並帶入使用權限,訊息
+        lineNotifyMessage("0VaZtrmwZ0dzfJw3sNqrSWVqlBziwc4ll8GYG9sSJs1", message)
 
 def ReadFile(initLines): #設定ReadFile函式
     #開啟檔案D:\signal\aaronfile.txt並讀取行數帶入
@@ -86,12 +70,9 @@ def ReadFile(initLines): #設定ReadFile函式
             #     print("line "+ str(count) +"= " + line.replace('\n', ''))
         finally:
 
-
             print("initLines = " + str(initLines)) #顯示行數
 
-
             cur_date_time = GetDateTime() #指定cur_date_time為呼叫GetDateTime函式
-
 
             if (initLines == lenLines):
                 #file hasn't changed...print to screen only
@@ -105,19 +86,15 @@ def ReadFile(initLines): #設定ReadFile函式
                 print ("Has Diffrence : " + cur_date_time)
                 print ("Diff Line : " + str(diffLine))
 
-
                 if (initLines != 0):
                     for i in range(0, diffLine):
                         lineIndex = initLines + (i+1)
                         print ("Line Index = " + str(lineIndex))
                         notifyData(lineIndex)
 
-
                 time.sleep(1.5) #等待1.3sec
                 ReadFile(lenLines) #呼叫ReadFile函式
 
-
             myfile.close()
-
 
 ReadFile(initialLines) #執行ReadFile函式
