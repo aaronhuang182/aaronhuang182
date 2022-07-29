@@ -69,7 +69,7 @@ def notifyData(showIndex): #設定notifyData函式並帶入
         #message += messageBasket[9] + " " + messageBasket[10] + " "
         
         #呼叫lineNotifyMessage函式並帶入使用權限,訊息
-        lineNotifyMessage("C7gNK8iwhyYHUfwGE5W9lg12UZjlXPsL7uJXYwPt0U2", message)
+        lineNotifyMessage("N4Ru9t4LHyV72qe105aDD9D7qu8nI74y4kuwcZnMfWi", message)
 
 
 def ReadFile(initLines): #設定ReadFile函式
@@ -113,7 +113,7 @@ def ReadFile(initLines): #設定ReadFile函式
                         notifyData(lineIndex)
 
 
-                time.sleep(1.3) #等待1.3sec
+                time.sleep(1.5) #等待1.3sec
                 ReadFile(lenLines) #呼叫ReadFile函式
 
 
