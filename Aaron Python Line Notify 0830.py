@@ -54,7 +54,7 @@ def notifyData(showIndex): #設定notifyData函式並帶入
         message += messageBasket[14] + " " + messageBasket[15] + " " 
 
         #呼叫lineNotifyMessage函式並帶入使用權限,訊息
-        lineNotifyMessage("kOb8U9pltadPV5LERYnm5cLJ4Qqfur393ffSj804Zhm", message)
+        lineNotifyMessage("ZaZbQdSkQuNbqqkpBooEQeykPvZOgDHm0m6jZqAEPCE", message)
 
 def ReadFile(initLines): #設定ReadFile函式
     #開啟檔案D:\signal\aaronfile.txt並讀取行數帶入
